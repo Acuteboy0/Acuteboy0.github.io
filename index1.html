@@ -1,0 +1,111 @@
+<html>
+<head>
+<base target=_blank>
+<style>
+        body {
+            background-image: url("线条小狗.jpg"); /* 设置背景图片的路径 */
+            background-size: cover; /* 背景图片铺满整个页面 */
+            background-repeat: no-repeat; /* 不重复平铺背景图片 */
+        }
+    </style>
+<style>
+        .highlight {
+            background-color: #C4DEFF; /* 设置文字背景颜色 */
+        }
+    </style>
+
+ <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById('backgroundMusic');
+            var isPlaying = false;
+            var resumePosition = 0;
+
+            if (localStorage.getItem('resumePosition')) {
+                // 如果localStorage中有保存的播放位置，则从该位置开始播放
+                resumePosition = parseFloat(localStorage.getItem('resumePosition'));
+                audio.currentTime = resumePosition;
+            }
+
+            window.addEventListener('beforeunload', function() {
+                // 监听页面离开事件，保存当前播放位置
+                localStorage.setItem('resumePosition', audio.currentTime.toString());
+            });
+
+            document.getElementById('playButton').addEventListener('click', function() {
+                if (isPlaying) {
+                    audio.pause();
+                    isPlaying = false;
+                } else {
+                    audio.play();
+                    isPlaying = true;
+                }
+            });
+        });
+    </script>
+
+<title>给我最爱的霏霏</title>
+</head>
+<body>
+<MARQUEE width="100%" bgcolor="#FFAEC9" behavior="alternate" direction="left" loop="true" scrolldelay="50">
+<font color="black" >
+我爱霏霏，霏霏是我的宝宝，我是霏霏的宝宝
+</font>
+</MARQUEE>
+<audio id="backgroundMusic" src="Versutus - fuzzy wuzzy +3.mp3" autoplay loop controls></audio>
+<h3 align="left">
+<font size="5" color="#FFAEC9">
+TO我爱的霏霏:
+</font>
+</h3>
+<table>
+<tr>
+<td>
+<a href="20230923.html">
+<font color="#FF5AA6">
+<b><i><u>
+2023年9月23日：
+</b></i></u>
+</font>
+</a>
+<br>
+<font size=2 color=red>(点击日期有惊喜喔)</font>
+</td>
+<td>
+<font size="4" color="black">
+<right>
+<span class="highlight">今天是和霏霏宝宝第一次见面！涛涛真的超级开心！</span>
+</right>
+</font>
+</td>
+<td align=right>
+<img src="1.gif" align="left" width="20%" height="30%">
+</td>
+</tr>
+
+
+<tr>
+<td>
+<left>
+<a href="20230929.html">
+<font color="#FF5AA6">
+<b><i><u>
+2023年9月29日：
+</b></i></u>
+</font>
+</a>
+</left>
+</td>
+<td>
+<font size="4" color="black">
+<right>
+<span class="highlight">这是有霏霏在身边的第一个中秋节！！！</span>
+</right>
+</font>
+</td>
+<td align=right>
+<img src="2.gif" align="left" width="20%" height="30%">
+</td>
+</tr>
+</table>
+</body>
+</html>
